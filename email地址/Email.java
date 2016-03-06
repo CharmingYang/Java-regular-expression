@@ -5,10 +5,8 @@ public class Email
 {
 	public static void main(String[] args)
 	{
-		Pattern pattern=Pattern.compile("");
-		Matcher matcher=pattern.matcher("");
-		
-		while (matcher.find()) 
-			StdOut.println(matcher.group(1));			
+		Pattern pattern=Pattern.compile("\\S+?@\\S+?.com");
+		Matcher matcher=pattern.matcher("XXX@qq.com");
+		StdOut.println(matcher.find());
 	}
 }
