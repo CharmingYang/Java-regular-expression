@@ -5,16 +5,10 @@ public class RegExp
 {
 	public static void main(String[] args)
 	{
-		Pattern pattern=Pattern.compile("foo");
-		Matcher matcher=pattern.matcher("foo");
-		boolean found=false;
-
-		while(matcher.find())
-		{
-			StdOut.print(matcher.group()+" "+matcher.start()+" "+matcher.end()+"\n");
-			found=true;
-		}
+		Pattern pattern=Pattern.compile("(?:class=\"repo\" title=\")(\\S*?)(?:\")");
+		Matcher matcher=pattern.matcher("class=\"repo\" title=\"Github\" class=\"repo\" title=\"Java-regular-expression\" class=\"repo\" title=\"Java-swing-and-awt\"");
 		
-		if(!found) StdOut.print("no match");
+		while (matcher.find()) 
+			System.out.println(matcher.group(1));			
 	}
 }
