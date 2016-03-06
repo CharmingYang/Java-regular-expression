@@ -9,6 +9,6 @@ public class RegExp
 		Matcher matcher=pattern.matcher("class=\"repo\" title=\"Github\" class=\"repo\" title=\"Java-regular-expression\" class=\"repo\" title=\"Java-swing-and-awt\"");
 		
 		while (matcher.find()) 
-			System.out.println(matcher.group(1));			
+			StdOut.println(matcher.group(1));			
 	}
 }
